@@ -1,3 +1,5 @@
+use std::time;
+
 use aoc2023;
 fn main() {
     let data = "7jlncfksix7rjgrpglmn9
@@ -1000,7 +1002,10 @@ eightn2skzmpmtgqhvvfxgqonevtbfsmfklzspxdrgj
 nine276rzshsrvncjrdzfxbmzzlvkhdlcc
 sevenfivexgznfftgthree44
 fivekltdkmm3rdmdnm32nineddsfdzpks";
+    let start = time::Instant::now();
     let ans = aoc2023::recover_calibration(data);
-    print!("{}", ans);
+    let end = time::Instant::now();
+    let diff = end - start;
+    println!("{}\n{:?}", ans,diff);
 
 }
