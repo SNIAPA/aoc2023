@@ -1,6 +1,6 @@
 use std::time;
 
-use aoc2023d1;
+use day1;
 fn main() {
     let data = "oneone
 twotwo
@@ -12,9 +12,8 @@ sevenseven
 eighteight
 ninenine";
     let start = time::Instant::now();
-    let ans = aoc2023d1::recover_calibration(data);
+    let ans = day1::recover_calibration(data);
     let end = time::Instant::now();
     let diff = end - start;
-    println!("{}\n{:?}", ans,diff);
-
+    println!("{}\n{:?}", ans, diff);
 }
